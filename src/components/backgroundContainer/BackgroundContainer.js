@@ -9,5 +9,5 @@ const BackgroundWrapper = styled.div`
   background-size: cover;
   height: 100vh;
   background-image: url(${fon});
-  padding: 100px;
+  padding: 30px;
 `;

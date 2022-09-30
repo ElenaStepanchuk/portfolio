@@ -1,16 +1,17 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
-import { Home, About, Skills, MyWork, Contacts } from '../pages';
-import { BackgroundContainer } from 'components';
+import { Routes, Route } from 'react-router-dom';
+import { Home, About, Skills, MyWork, Contact } from '../pages';
+import { BackgroundContainer, Header } from '../components';
 export const App = () => {
   return (
     <>
       <BackgroundContainer>
+        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="home" index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="skills" element={<Skills />} />
-          <Route path="work" element={<MyWork />} />
-          <Route path="contacts" element={<Contacts />} />
+          <Route path="mywork" element={<MyWork />} />
+          <Route path="contact" element={<Contact />} />
         </Routes>
       </BackgroundContainer>
     </>

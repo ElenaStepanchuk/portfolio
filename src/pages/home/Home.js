@@ -1,13 +1,9 @@
-import { Link, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+
 const Home = () => {
   return (
     <>
       <TitlePage>My home page</TitlePage>
-      <nav>
-        <Link to="about">About</Link>
-      </nav>
-      <Outlet />
     </>
   );
 };
