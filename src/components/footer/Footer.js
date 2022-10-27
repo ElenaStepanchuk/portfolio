@@ -5,13 +5,13 @@ import styled from 'styled-components';
 import menuSvg from '../../img/footer/menu.svg';
 import linkedinSvg from '../../img/footer/linkedin.svg';
 import githubSvg from '../../img/footer/github.svg';
-import facebookSvg from '../../img/footer/facebook.svg';
+// import facebookSvg from '../../img/footer/facebook.svg';
 import instagramSvg from '../../img/footer/instagram.svg';
 import twitterSvg from '../../img/footer/twitter.svg';
-import mailSvg from '../../img/footer/mail.svg';
-import skypeSvg from '../../img/footer/skype.svg';
-import viberSvg from '../../img/footer/viber.svg';
-import whatsappSvg from '../../img/footer/whatsapp.svg';
+// import mailSvg from '../../img/footer/mail.svg';
+// import skypeSvg from '../../img/footer/skype.svg';
+// import viberSvg from '../../img/footer/viber.svg';
+// import whatsappSvg from '../../img/footer/whatsapp.svg';
 
 const Footer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
