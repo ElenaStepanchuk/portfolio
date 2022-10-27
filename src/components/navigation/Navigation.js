@@ -10,70 +10,50 @@ import contactsSvg from '../../img/nav/contacts.svg';
 const Navigation = () => {
   return (
     <NavContainer>
-      {/* <NavBattonsSection> */}
-      <NavLinkButton
-        // style={({ isActive }) => ({ color: isActive ? 'green' : 'black' })}
-        to="home"
-      >
+      <NavLinkButton to="home">
         <IconNav src={homeSvg} alt="icon home" />
         <SpanNavText>Home</SpanNavText>
       </NavLinkButton>
-      <NavLinkButton
-        // style={({ isActive }) => ({
-        //   color: isActive ? 'green' : 'black',
-        // })}
-        to="about"
-      >
-        <IconNav src={personSvg} alt="icon home" />
-        {/* About */}
+      <NavLinkButton to="about">
+        <IconNav src={personSvg} alt="icon person" />
+        <SpanNavText>About</SpanNavText>
       </NavLinkButton>
-      <NavLinkButton
-        // style={({ isActive }) => ({ color: isActive ? 'green' : 'black' })}
-        to="skills"
-      >
-        <IconNav src={skillsSvg} alt="icon home" />
-        {/* Skills */}
+      <NavLinkButton to="skills">
+        <IconNav src={skillsSvg} alt="icon skills" />
+        <SpanNavText>Skills</SpanNavText>
       </NavLinkButton>
-      {/* </NavBattonsSection> */}
-      {/* <NavBattonsSection> */}
-      <NavLinkButton
-        // style={({ isActive }) => ({ color: isActive ? 'green' : 'black' })}
-        to="mywork"
-      >
-        <IconNav src={myWorkSvg} alt="icon home" />
-        {/* My works */}
+      <NavLinkButton to="mywork">
+        <IconNav src={myWorkSvg} alt="icon ny work" />
+        <SpanNavText>My works</SpanNavText>
       </NavLinkButton>
-      <NavLinkButton
-        // style={({ isActive }) => ({ color: isActive ? 'green' : 'black' })}
-        to="contact"
-      >
-        <IconNav src={contactsSvg} alt="icon home" />
-        {/* Contact */}
+      <NavLinkButton to="contact">
+        <IconNav src={contactsSvg} alt="icon contact" />
+        <SpanNavText>Contact</SpanNavText>
       </NavLinkButton>
-      {/* </NavBattonsSection> */}
     </NavContainer>
   );
 };
 export default Navigation;
 
 const NavContainer = styled.nav`
-  /* font-family: 'Jacques Francois Shadow'; */
   width: 100px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   border-radius: 20px;
-  background-color: #9370db;
+  /* background-color: #9370db; */
+  background: linear-gradient(
+    90deg,
+    rgba(80, 87, 102, 1) 0%,
+    rgba(25, 25, 25, 1) 100%
+  );
   margin-left: auto;
   text-transform: uppercase;
+  position: absolute;
+  top: 50px;
+  right: 50px;
 `;
-// const NavBattonsSection = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   :not(:first-child) {
-//     margin-top: 10px;
-//   }
-// `;
+
 const NavLinkButton = styled(NavLink)`
   padding: 20px;
   width: 60px;
@@ -84,43 +64,54 @@ const NavLinkButton = styled(NavLink)`
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  transition: all 500ms ease;
 
   :not(:first-child) {
     margin-top: 20px;
   }
-  :active,
-  :focus,
-  :hover {
-    border-radius: 20px;
-    background-color: #7b49dd;
 
-    /* transform: translateY(-17px);
-    transition: 300ms; */
+  :active,
+  :focus {
+    border-radius: 20px;
+    /* #7b49dd */
+    background: linear-gradient(
+      90deg,
+      rgba(104, 114, 140, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  :hover .SpanNavText {
+    display: block;
+  }
+
+  :before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: all 1s ease;
+  }
+
+  :hover:before {
+    height: 100%;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
   }
 `;
 const IconNav = styled.img`
   width: 46px;
   height: 46px;
-  :hover + span {
-    display: inline-block;
-  }
-
-  /* :hover {
-    content: 'Home';
-  } */
-  /* fill: #ffffff;
-  stroke: #ffffff; */
+  fill: #ffffff;
 `;
 const SpanNavText = styled.span`
-  display: none;
-  position: absolute;
   font-size: 12px;
   font-weight: bold;
-  top: 50%;
-  /* margin-top: 10px; */
-  /* color: #000000; */
+  margin-top: 5px;
   color: #ffffff;
-  :hover {
-    display: inline-block;
-  }
 `;

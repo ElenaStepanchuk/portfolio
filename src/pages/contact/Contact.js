@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <>
-      <h1>My ontacts page</h1>
+      <h1>My contacts page</h1>
     </>
   );
 };

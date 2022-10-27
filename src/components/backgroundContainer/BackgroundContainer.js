@@ -10,4 +10,5 @@ const BackgroundWrapper = styled.div`
   height: 100vh;
   background-image: url(${fon});
   padding: 30px;
+  text-align: center;
 `;
