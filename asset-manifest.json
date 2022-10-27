@@ -1,19 +1,34 @@
 {
   "files": {
-    "main.css": "/react-homework-template/static/css/main.e6c13ad2.css",
-    "main.js": "/react-homework-template/static/js/main.0f8ab74d.js",
-    "static/media/fon.jpg": "/react-homework-template/static/media/fon.4b95438c5bf3ffa68893.jpg",
-    "static/media/skills.svg": "/react-homework-template/static/media/skills.6c3b2c8cb8e1753aabe684ad29d7b6d2.svg",
-    "index.html": "/react-homework-template/index.html",
-    "static/media/myWork.svg": "/react-homework-template/static/media/myWork.6091bc8f3d3f2bf4376f68367a045944.svg",
-    "static/media/person.svg": "/react-homework-template/static/media/person.8e5817bf3f8ea45ef4e8424739214f62.svg",
-    "static/media/contacts.svg": "/react-homework-template/static/media/contacts.0f74733b4772612509d082303cbd6996.svg",
-    "static/media/home.svg": "/react-homework-template/static/media/home.dd02a24ba76e5d30c6562464184b1a2f.svg",
-    "main.e6c13ad2.css.map": "/react-homework-template/static/css/main.e6c13ad2.css.map",
-    "main.0f8ab74d.js.map": "/react-homework-template/static/js/main.0f8ab74d.js.map"
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.0baa7531.js",
+    "static/js/482.a786c531.chunk.js": "/static/js/482.a786c531.chunk.js",
+    "static/js/242.d0075954.chunk.js": "/static/js/242.d0075954.chunk.js",
+    "static/js/989.fcc34c0f.chunk.js": "/static/js/989.fcc34c0f.chunk.js",
+    "static/js/580.36989fa0.chunk.js": "/static/js/580.36989fa0.chunk.js",
+    "static/js/62.7ad6c5b1.chunk.js": "/static/js/62.7ad6c5b1.chunk.js",
+    "static/media/fon.jpg": "/static/media/fon.4b95438c5bf3ffa68893.jpg",
+    "static/media/instagram.svg": "/static/media/instagram.321c762c5588948fbda7d010cc25cb07.svg",
+    "static/media/github.svg": "/static/media/github.a5feef4cc6a5c75d60d18c7985e2bd00.svg",
+    "static/media/twitter.svg": "/static/media/twitter.10d2a60c03ff74777b11450a76e8701c.svg",
+    "static/media/skills.svg": "/static/media/skills.ed615269b880fb6995b2daa956467424.svg",
+    "static/media/menu.svg": "/static/media/menu.a72c24bfa9a510638de30f516b5c3689.svg",
+    "index.html": "/index.html",
+    "static/media/myWork.svg": "/static/media/myWork.c9d1d43992fcdf20b198828e4eff3d15.svg",
+    "static/media/person.svg": "/static/media/person.b11a4ab53093f9a890e7257d04307494.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.36fdb04e6c4c817b54d39b0a39f8e105.svg",
+    "static/media/contacts.svg": "/static/media/contacts.2de4f7166b3461ba3bd1f9a710fdfa64.svg",
+    "static/media/home.svg": "/static/media/home.33e80b9575726612e8c0beba979007b4.svg",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.0baa7531.js.map": "/static/js/main.0baa7531.js.map",
+    "482.a786c531.chunk.js.map": "/static/js/482.a786c531.chunk.js.map",
+    "242.d0075954.chunk.js.map": "/static/js/242.d0075954.chunk.js.map",
+    "989.fcc34c0f.chunk.js.map": "/static/js/989.fcc34c0f.chunk.js.map",
+    "580.36989fa0.chunk.js.map": "/static/js/580.36989fa0.chunk.js.map",
+    "62.7ad6c5b1.chunk.js.map": "/static/js/62.7ad6c5b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.0f8ab74d.js"
+    "static/js/main.0baa7531.js"
   ]
 }
