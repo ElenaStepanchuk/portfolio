@@ -1,14 +1,21 @@
 import styled from 'styled-components';
+import bg from '../../img/bg/bg.jpg';
 
-const HomePageWrapper = ({ children }) => {
+const PageWrapper = ({ children }) => {
   return <Wrapper>{children} </Wrapper>;
 };
-export default HomePageWrapper;
+
 const Wrapper = styled.div`
-  background-color: rgba(255, 255, 255, 0.6);
-  margin-left: 80px;
-  padding: 30px;
-  width: 550px;
-  height: auto;
-  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-image: url(${bg});
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  max-height: 1200px;
+  overflow: hidden;
+  display: flex;
+  padding: 50px;
 `;
+
+export { PageWrapper };

@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { BackgroundContainer, Header, Footer, Loader } from '../components';
+import { BackgroundContainer, Header, Loader } from '../components';
 
 const Home = lazy(() => import('../pages/home/Home'));
 const About = lazy(() => import('../pages/about/About'));
@@ -17,6 +17,7 @@ export const App = () => {
         <Header />
         <Suspense fallback={<Loader />}>
           <Routes>
+            <Route path="/" index element={<Home />} />
             <Route path="home" index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="skills" element={<Skills />} />
@@ -24,7 +25,6 @@ export const App = () => {
             <Route path="contact" element={<Contact />} />
           </Routes>
         </Suspense>
-        <Footer />
       </BackgroundContainer>
     </>
   );
