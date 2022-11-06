@@ -1,7 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import React from 'react';
 import { PageWrapper } from 'components/pageWrapper/PageWrapper';
 import worktable from '../../img/worktable.jpg';
+// import { HomeAnimations } from 'components';
 // import SocialBtn from 'components/socialBtn';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         </LeftPage>
         <RightPage>
           {/* <HomePhoto src={worktable} alt="photo work table" /> */}
+          {/* <HomeAnimations /> */}
         </RightPage>
         {/* <SocialBtn /> */}
       </PageWrapper>

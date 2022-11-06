@@ -1,0 +1,15 @@
+.container_animation {
+  margin-left: 1024px;
+  display: flex;
+}
+
+/* .link_animation :not(:first-child) {
+  margin-left: 30px;
+} */
+.link_animation {
+  margin-left: 30px;
+}
+.img_animation {
+  width: 40px;
+  height: 40px;
+}

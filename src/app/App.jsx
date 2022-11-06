@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { BackgroundContainer, Header, Loader } from '../components';
+import { BackgroundContainer, Header, Loader, Footer } from '../components';
 
 const Home = lazy(() => import('../pages/home/Home'));
 const About = lazy(() => import('../pages/about/About'));
@@ -25,6 +25,7 @@ export const App = () => {
             <Route path="contact" element={<Contact />} />
           </Routes>
         </Suspense>
+        <Footer />
       </BackgroundContainer>
     </>
   );
