@@ -5,3 +5,4 @@ export { default as Loader } from '../components/loader/Loader';
 export { default as SocialBtn } from './socialBtn/SocialBtn';
 export { default as FooterAnimations } from './footerAnimations/FooterAnimations';
 export { default as Footer } from './footer/Footer';
+export { default as DollarsAnimation } from './dollarsAnimation/DollarsAnimation';

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import React from 'react';
+
 import { PageWrapper } from 'components/pageWrapper/PageWrapper';
 import worktable from '../../img/worktable.jpg';
-// import { HomeAnimations } from 'components';
+// import { DollarsAnimation } from 'components';
+
 // import SocialBtn from 'components/socialBtn';
 
 const Home = () => {
@@ -10,13 +12,19 @@ const Home = () => {
     <>
       <PageWrapper>
         <LeftPage>
+          {/* <DollarsAnimation /> */}
           <HomePhoto src={worktable} alt="photo work table" />
         </LeftPage>
         <RightPage>
-          {/* <HomePhoto src={worktable} alt="photo work table" /> */}
-          {/* <HomeAnimations /> */}
+          {/* <DollarsAnimation /> */}
+          {/* <RightPageHome /> */}
+          {/* <canvas
+            id="canvas"
+            width="200"
+            height="100"
+            className={css.canvas_styles}
+          ></canvas> */}
         </RightPage>
-        {/* <SocialBtn /> */}
       </PageWrapper>
     </>
   );
@@ -25,10 +33,10 @@ export default Home;
 
 const LeftPage = styled.div`
   display: flex;
-  width: 462px;
-  overflow: hidden;
+  width: 512px;
+  /* overflow: hidden; */
   justify-content: center;
-  padding-right: 50px;
+  padding: 50px;
 `;
 
 const HomePhoto = styled.img`
@@ -40,8 +48,9 @@ const HomePhoto = styled.img`
 
 const RightPage = styled.div`
   display: flex;
-  width: 462px;
-  overflow: hidden;
+  width: 512px;
+  /* overflow: hidden; */
   justify-content: center;
+  text-align: start;
   padding-left: 50px;
 `;

@@ -53,7 +53,7 @@ const LeftPage = styled.div`
   width: 462px;
   overflow: hidden;
   justify-content: center;
-  padding-right: 50px;
+  padding: 50px;
 `;
 
 const RightPage = styled.div`
@@ -106,7 +106,7 @@ const Span = styled.span`
 const Text = styled.p`
   color: rgba(121, 99, 78, 1);
   font-style: italic;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   text-align: justify;
   display: inline-block;

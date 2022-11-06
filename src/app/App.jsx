@@ -1,6 +1,12 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { BackgroundContainer, Header, Loader, Footer } from '../components';
+import {
+  BackgroundContainer,
+  Header,
+  Loader,
+  Footer,
+  DollarsAnimation,
+} from '../components';
 
 const Home = lazy(() => import('../pages/home/Home'));
 const About = lazy(() => import('../pages/about/About'));
@@ -15,7 +21,9 @@ export const App = () => {
     <>
       <BackgroundContainer>
         <Header />
+
         <Suspense fallback={<Loader />}>
+          <DollarsAnimation />
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="home" index element={<Home />} />

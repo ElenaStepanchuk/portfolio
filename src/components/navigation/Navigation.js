@@ -98,7 +98,9 @@ const Navigation = () => {
 };
 export default Navigation;
 
-const LeftNavContainer = styled.div``;
+const LeftNavContainer = styled.div`
+  padding-left: 30px;
+`;
 const NavTitle = styled.h1`
   font-size: 28px;
   color: rgba(121, 99, 78, 1);

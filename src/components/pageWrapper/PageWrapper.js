@@ -13,9 +13,10 @@ const Wrapper = styled.div`
   margin-right: auto;
   max-width: 1024px;
   max-height: 1200px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
-  padding: 50px;
+  /* flex-wrap: wrap; */
+  /* padding: 50px; */
 `;
 
 export { PageWrapper };
