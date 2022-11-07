@@ -344,10 +344,9 @@ const NavLinkButton = styled(NavLink)`
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 65x;
+    min-width: 65px;
     height: 0;
-    background: rgba(255, 255, 255, 0.5);
-    /* background: rgba(192, 166, 143, 0.5); */
+    background: rgba(192, 166, 143, 0.5);
     border-radius: 20px;
     transition: all 1s ease;
   }
@@ -358,7 +357,6 @@ const NavLinkButton = styled(NavLink)`
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    /* z-index: 2; */
   }
 `;
 const IconNav = styled.img`
