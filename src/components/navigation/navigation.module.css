@@ -1,0 +1,12 @@
+nav .active {
+  border-radius: 20px;
+  background: #ffffff;
+  /* background: linear-gradient(
+    90deg,
+    rgba(104, 114, 140, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); */
+
+  /* background: #ffffff; */
+  /* border: 1px solid rgba(121, 99, 78, 1); */
+}

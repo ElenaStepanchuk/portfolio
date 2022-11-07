@@ -147,7 +147,7 @@ const DollarsAnimation = () => {
       el68.current,
     ];
     const interval = 9;
-    const transactionY = 850;
+    const transactionY = 1150;
     gsap.to(el1.current, {
       y: transactionY,
       repeat: -1,

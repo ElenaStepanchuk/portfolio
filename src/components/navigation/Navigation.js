@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import css from './navigation.module.css';
 
 import homeSvg from '../../img/nav/home.svg';
 import personSvg from '../../img/nav/person.svg';
@@ -72,7 +73,7 @@ const Navigation = () => {
         </NavText>
       </LeftNavContainer>
       <RightNavContainer>
-        <NavLinkButton to="home">
+        <NavLinkButton to="home" activeClassName=".active">
           <IconNav src={homeSvg} alt="icon home" />
           <SpanNavText>Home</SpanNavText>
         </NavLinkButton>
@@ -316,15 +317,13 @@ const NavLinkButton = styled(NavLink)`
   text-align: center;
   text-decoration: none;
   color: rgba(121, 99, 78, 1);
-  /* color: rgba(230, 230, 250, 1); */
-  /* color: rgba(40, 0, 28, 1); */
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   transition: all 500ms ease;
   transition: transform 0.2s;
-  z-index: 5;
+
   :hover {
     transform: scale(1.3);
   }
@@ -333,18 +332,11 @@ const NavLinkButton = styled(NavLink)`
     margin-left: 15px;
   }
 
-  :active,
   :focus,
   :hover {
     border-radius: 20px;
-    background: linear-gradient(
-      90deg,
-      rgba(104, 114, 140, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
-
     background: #ffffff;
-    /* border: 1px solid rgba(121, 99, 78, 1); */
+    border: 1px solid rgba(121, 99, 78, 1);
   }
 
   :before {
@@ -352,10 +344,10 @@ const NavLinkButton = styled(NavLink)`
     position: absolute;
     top: 0;
     left: 0;
-    width: 65x;
+    min-width: 65x;
     height: 0;
-    /* background: rgba(255, 255, 255, 0.5); */
-    background: rgba(192, 166, 143, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    /* background: rgba(192, 166, 143, 0.5); */
     border-radius: 20px;
     transition: all 1s ease;
   }
@@ -366,16 +358,12 @@ const NavLinkButton = styled(NavLink)`
     font-size: 12px;
     font-weight: bold;
     text-align: center;
+    /* z-index: 2; */
   }
 `;
 const IconNav = styled.img`
   width: 32px;
   height: 32px;
-  /* transition: transform 0.2s;
-  z-index: 5;
-  :hover {
-    transform: scale(1.5);
-  } */
 `;
 const SpanNavText = styled.span`
   font-size: 8px;

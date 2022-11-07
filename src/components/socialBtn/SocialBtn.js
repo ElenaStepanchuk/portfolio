@@ -87,7 +87,7 @@ const FooterButton = styled.button`
   margin-left: 80px;
   margin-top: 50px;
   padding: 10px;
-  z-index: 5;
+  /* z-index: 5; */
   background: linear-gradient(
     90deg,
     rgba(104, 114, 140, 1) 0%,

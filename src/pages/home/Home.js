@@ -55,7 +55,7 @@ const RightPage = styled.div`
   // overflow: hidden;
   // justify-content: center;
   // text-align: start;
-  text-transform: uppercase;
+
   padding: 50px;
   width: 512px;
 `;
@@ -63,4 +63,5 @@ const Text = styled.p`
   font-size: 27px;
   color: rgba(121, 99, 78, 1);
   font-weight: bold;
+  text-transform: uppercase;
 `;
