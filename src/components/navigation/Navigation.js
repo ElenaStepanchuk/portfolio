@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import css from './navigation.module.css';
+import css from './navigation.css';
 
 import homeSvg from '../../img/nav/home.svg';
 import personSvg from '../../img/nav/person.svg';
@@ -336,7 +336,7 @@ const NavLinkButton = styled(NavLink)`
   :hover {
     border-radius: 20px;
     background: #ffffff;
-    border: 1px solid rgba(121, 99, 78, 1);
+    /* border: 1px solid rgba(121, 99, 78, 1); */
   }
 
   :before {
