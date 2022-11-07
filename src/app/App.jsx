@@ -19,11 +19,12 @@ const Contact = lazy(() => import('../pages/contact/Contact'));
 export const App = () => {
   return (
     <>
+      <DollarsAnimation />
       <BackgroundContainer>
         <Header />
 
         <Suspense fallback={<Loader />}>
-          <DollarsAnimation />
+          {/* <DollarsAnimation /> */}
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="home" index element={<Home />} />

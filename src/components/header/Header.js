@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Navigation } from 'components';
 import styled from 'styled-components';
+// import headerBg from '../../img/bg/headerBg.jpg';
 
 const Header = () => {
   return (
@@ -21,6 +22,7 @@ const HeaderWrapper = ({ children }) => {
 };
 
 const HeaderContainer = styled.div`
+  position: relative;
   display: flex;
   background: rgba(242, 237, 233, 1);
   max-width: 1024px;

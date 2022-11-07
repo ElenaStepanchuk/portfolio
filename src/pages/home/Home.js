@@ -16,6 +16,9 @@ const Home = () => {
           <HomePhoto src={worktable} alt="photo work table" />
         </LeftPage>
         <RightPage>
+          <Text>Hi!</Text>
+          <Text> Let`s get acquainted,</Text>
+          <Text> I`m a Full Stack Developer...</Text>
           {/* <DollarsAnimation /> */}
           {/* <RightPageHome /> */}
           {/* <canvas
@@ -47,10 +50,17 @@ const HomePhoto = styled.img`
 `;
 
 const RightPage = styled.div`
-  display: flex;
+  // display: flex;
+  // flex-wrap: wrap;
+  // overflow: hidden;
+  // justify-content: center;
+  // text-align: start;
+  text-transform: uppercase;
+  padding: 50px;
   width: 512px;
-  /* overflow: hidden; */
-  justify-content: center;
-  text-align: start;
-  padding-left: 50px;
+`;
+const Text = styled.p`
+  font-size: 27px;
+  color: rgba(121, 99, 78, 1);
+  font-weight: bold;
 `;
