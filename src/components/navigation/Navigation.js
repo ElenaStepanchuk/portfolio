@@ -73,7 +73,7 @@ const Navigation = () => {
         </NavText>
       </LeftNavContainer>
       <RightNavContainer>
-        <NavLinkButton to="home" activeClassName=".active">
+        <NavLinkButton to="home">
           <IconNav src={homeSvg} alt="icon home" />
           <SpanNavText>Home</SpanNavText>
         </NavLinkButton>
@@ -336,7 +336,6 @@ const NavLinkButton = styled(NavLink)`
   :hover {
     border-radius: 20px;
     background: #ffffff;
-    /* border: 1px solid rgba(121, 99, 78, 1); */
   }
 
   :before {

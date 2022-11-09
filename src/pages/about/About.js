@@ -50,17 +50,17 @@ const About = () => {
 export default About;
 
 const LeftPage = styled.div`
-  width: 462px;
+  width: 512px;
   overflow: hidden;
   justify-content: center;
   padding: 50px;
 `;
 
 const RightPage = styled.div`
-  width: 462px;
+  width: 512px;
   overflow: hidden;
   justify-content: center;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 `;
 const animation = keyframes`
   10% {
