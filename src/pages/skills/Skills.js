@@ -1,7 +1,10 @@
+import { PageWrapper } from 'components';
 const Skills = () => {
   return (
     <>
-      <h1>My skills</h1>
+      <PageWrapper>
+        <h1>My skills</h1>
+      </PageWrapper>
     </>
   );
 };

@@ -16,4 +16,4 @@ const Wrapper = styled.div`
   display: flex;
 `;
 
-export { PageWrapper };
+export default PageWrapper;

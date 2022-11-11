@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import React from 'react';
 
-import { PageWrapper } from 'components/pageWrapper/PageWrapper';
+import { PageWrapper } from 'components';
 import worktable from '../../img/worktable.jpg';
 // import { DollarsAnimation } from 'components';
 
@@ -27,7 +27,6 @@ const Home = () => {
             <Span>t</Span>
             <Span>`</Span>
             <Span>s</Span>
-            <Span>l</Span>
             <Span>&nbsp;</Span>
             <Span>g</Span>
             <Span>e</Span>
@@ -45,7 +44,37 @@ const Home = () => {
             <Span>d</Span>
             <Span>,</Span>
           </Text>
-          <Text> I`m a Full Stack Developer...</Text>
+          <Text>
+            <Span>I</Span>
+            <Span>`</Span>
+            <Span>m</Span>
+            <Span>&nbsp;</Span>
+            <Span>a</Span>
+            <Span>&nbsp;</Span>
+            <Span>F</Span>
+            <Span>u</Span>
+            <Span>l</Span>
+            <Span>l</Span>
+            <Span>&nbsp;</Span>
+            <Span>S</Span>
+            <Span>t</Span>
+            <Span>a</Span>
+            <Span>c</Span>
+            <Span>k</Span>
+            <Span>&nbsp;</Span>
+            <Span>D</Span>
+            <Span>e</Span>
+            <Span>v</Span>
+            <Span>e</Span>
+            <Span>l</Span>
+            <Span>o</Span>
+            <Span>p</Span>
+            <Span>e</Span>
+            <Span>r</Span>
+            <Span>.</Span>
+            <Span>.</Span>
+            <Span>.</Span>
+          </Text>
           {/* <DollarsAnimation /> */}
           {/* <RightPageHome /> */}
           {/* <canvas
@@ -64,7 +93,6 @@ export default Home;
 const LeftPage = styled.div`
   display: flex;
   width: 512px;
-  /* overflow: hidden; */
   justify-content: center;
   padding: 50px;
 `;
@@ -77,12 +105,6 @@ const HomePhoto = styled.img`
 `;
 
 const RightPage = styled.div`
-  // display: flex;
-  // flex-wrap: wrap;
-  // overflow: hidden;
-  // justify-content: center;
-  // text-align: start;
-
   padding: 50px;
   width: 512px;
 `;
@@ -98,7 +120,7 @@ const animation = keyframes`
 		opacity: 1;
 	}
 	100% {
-		transform: rotate(0deg) translate(0);
+    transform: rotate(0deg) translate(0);
 		opacity: 1;
 	}
   `;
@@ -196,34 +218,34 @@ const Span = styled.span`
   :nth-of-type(29) {
     animation-delay: 2.4s;
   }
-  :nth-of-type(30) {
-    animation-delay: 2.45s;
-  }
-  :nth-of-type(31) {
-    animation-delay: 2.5s;
-  }
-  :nth-of-type(32) {
-    animation-delay: 2.55s;
-  }
-  :nth-of-type(33) {
-    animation-delay: 2.6s;
-  }
-  :nth-of-type(34) {
-    animation-delay: 2.65s;
-  }
-  :nth-of-type(35) {
-    animation-delay: 2.7s;
-  }
-  :nth-of-type(36) {
-    animation-delay: 2.75s;
-  }
-  :nth-of-type(37) {
-    animation-delay: 2.8s;
-  }
-  :nth-of-type(38) {
-    animation-delay: 2.85s;
-  }
-  :nth-of-type(39) {
-    animation-delay: 2.9s;
-  }
+  // :nth-of-type(30) {
+  //   animation-delay: 4.45s;
+  // }
+  // :nth-of-type(31) {
+  //   animation-delay: 4.5s;
+  // }
+  // :nth-of-type(32) {
+  //   animation-delay: 2.55s;
+  // }
+  // :nth-of-type(33) {
+  //   animation-delay: 2.6s;
+  // }
+  // :nth-of-type(34) {
+  //   animation-delay: 2.65s;
+  // }
+  // :nth-of-type(35) {
+  //   animation-delay: 2.7s;
+  // }
+  // :nth-of-type(36) {
+  //   animation-delay: 2.75s;
+  // }
+  // :nth-of-type(37) {
+  //   animation-delay: 2.8s;
+  // }
+  // :nth-of-type(38) {
+  //   animation-delay: 2.85s;
+  // }
+  // :nth-of-type(39) {
+  //   animation-delay: 2.9s;
+  // }
 `;

@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { PageWrapper } from 'components/pageWrapper/PageWrapper';
+import { PageWrapper } from 'components';
 // import SocialBtn from 'components/socialBtn';
 
 const About = () => {
