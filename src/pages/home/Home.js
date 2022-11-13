@@ -3,16 +3,12 @@ import React from 'react';
 
 import { PageWrapper } from 'components';
 import worktable from '../../img/worktable.jpg';
-// import { DollarsAnimation } from 'components';
-
-// import SocialBtn from 'components/socialBtn';
 
 const Home = () => {
   return (
     <>
       <PageWrapper>
         <LeftPage>
-          {/* <DollarsAnimation /> */}
           <HomePhoto src={worktable} alt="photo work table" />
         </LeftPage>
         <RightPage>
@@ -75,7 +71,7 @@ const Home = () => {
             <Span>.</Span>
             <Span>.</Span>
           </Text>
-          {/* <DollarsAnimation /> */}
+
           {/* <RightPageHome /> */}
           {/* <canvas
             id="canvas"
@@ -101,7 +97,7 @@ const HomePhoto = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
+  /* border-radius: 30px; */
 `;
 
 const RightPage = styled.div`

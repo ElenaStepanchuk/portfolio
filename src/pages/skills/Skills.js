@@ -1,11 +1,216 @@
+import styled, { keyframes } from 'styled-components';
+import React from 'react';
+import cssPng from '../../img/skills/css.png';
+import gitPng from '../../img/skills/git.png';
+import htmlPng from '../../img/skills/html.png';
+import jsPng from '../../img/skills/js.png';
+import jsonPng from '../../img/skills/json.png';
+import mongodbPng from '../../img/skills/mongodb.png';
+import nodePng from '../../img/skills/node.png';
+import postmanPng from '../../img/skills/postman.png';
+import reactPng from '../../img/skills/react.png';
+import reduxPng from '../../img/skills/redux.png';
+import styledComponentPng from '../../img/skills/styledComponent.png';
+import webpackPng from '../../img/skills/webpack.png';
+
 import { PageWrapper } from 'components';
 const Skills = () => {
   return (
     <>
       <PageWrapper>
-        <h1>My skills</h1>
+        <LeftPage>
+          <Span>M</Span>
+          <Span>y</Span>
+          <Span>&nbsp;</Span>
+          <Span>s</Span>
+          <Span>k</Span>
+          <Span>i</Span>
+          <Span>l</Span>
+          <Span>l</Span>
+          <Span>s</Span>
+          <Span>:</Span>
+          <SkillsList>
+            <ItemList>HTML, HTML5</ItemList>
+            <ItemList>CSS, CSS3, SCSS, SASS, Css Modules</ItemList>
+            <ItemList>Styled Components</ItemList>
+            <ItemList>Flex Box</ItemList>
+            <ItemList>ES6, ES6+</ItemList>
+            <ItemList>Git</ItemList>
+            <ItemList>JSON</ItemList>
+            <ItemList>WebPack</ItemList>
+            <ItemList>Java Script</ItemList>
+            <ItemList>REST API</ItemList>
+            <ItemList>AJAX</ItemList>
+            <ItemList>React JS, React Hooks, React Router</ItemList>
+            <ItemList>React Native</ItemList>
+            <ItemList>Redux</ItemList>
+            <ItemList>Node.js</ItemList>
+            <ItemList>Postman</ItemList>
+            <ItemList>MongoDB</ItemList>
+            <ItemList>Mongoose</ItemList>
+            <ItemList>Adaptive and responsive layout</ItemList>
+            <ItemList>Figma</ItemList>
+          </SkillsList>
+        </LeftPage>
+        <RightPage>
+          <SkillsIcon src={cssPng} alt="css icon" />
+          <SkillsIcon src={gitPng} alt="git icon" />
+          <SkillsIcon src={htmlPng} alt="htm icon" />
+          <SkillsIcon src={jsPng} alt="js icon" />
+          <SkillsIcon src={jsonPng} alt="json icon" />
+          <SkillsIcon src={mongodbPng} alt="mongodb icon" />
+          <SkillsIcon src={nodePng} alt="node icon" />
+          <SkillsIcon src={postmanPng} alt="postman icon" />
+          <SkillsIcon src={reactPng} alt="react icon" />
+          <SkillsIcon src={reduxPng} alt="redux icon" />
+          <SkillsIcon src={styledComponentPng} alt="styled component icon" />
+          <SkillsIcon src={webpackPng} alt="webpack icon" />
+        </RightPage>
       </PageWrapper>
     </>
   );
 };
 export default Skills;
+
+const LeftPage = styled.div`
+  /* display: flex; */
+  width: 512px;
+  /* justify-content: center; */
+  padding: 50px;
+  /* flex-wrap: wrap; */
+`;
+const animation = keyframes`
+  10% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(0deg) translate(0);
+		opacity: 1;
+	}
+  `;
+const Span = styled.span`
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  color: rgba(121, 99, 78, 1);
+  opacity: 0;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: ${animation} 0.5s forwards;
+
+  :nth-of-type(2) {
+    animation-delay: 0.05s;
+  }
+  :nth-of-type(3) {
+    animation-delay: 0.1s;
+  }
+  :nth-of-type(4) {
+    animation-delay: 0.15s;
+  }
+  :nth-of-type(5) {
+    animation-delay: 0.2s;
+  }
+  :nth-of-type(6) {
+    animation-delay: 0.25s;
+  }
+  :nth-of-type(7) {
+    animation-delay: 0.3s;
+  }
+  :nth-of-type(8) {
+    animation-delay: 0.35s;
+  }
+  :nth-of-type(9) {
+    animation-delay: 0.4s;
+  }
+  :nth-of-type(10) {
+    animation-delay: 0.45s;
+  }
+`;
+
+const SkillsList = styled.ul`
+  padding: 0 0 0 15px;
+  margin: 10px 0 0 0;
+`;
+const ItemList = styled.li`
+  color: rgba(121, 99, 78, 1);
+  font-style: italic;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: justify;
+  /* display: inline-block;s */
+  opacity: 0;
+  transform: rotate(-5deg) translate(-650px, 0);
+  animation: ${animation} 1s forwards;
+  animation-delay: 1s;
+  :nth-of-type(20) {
+    animation-delay: 10.5s;
+  }
+  :nth-of-type(19) {
+    animation-delay: 10s;
+  }
+  :nth-of-type(18) {
+    animation-delay: 9.5s;
+  }
+  :nth-of-type(17) {
+    animation-delay: 9s;
+  }
+  :nth-of-type(16) {
+    animation-delay: 8.5s;
+  }
+  :nth-of-type(15) {
+    animation-delay: 8s;
+  }
+  :nth-of-type(14) {
+    animation-delay: 7.5s;
+  }
+  :nth-of-type(13) {
+    animation-delay: 7s;
+  }
+  :nth-of-type(12) {
+    animation-delay: 6.5s;
+  }
+  :nth-of-type(11) {
+    animation-delay: 6s;
+  }
+  :nth-of-type(10) {
+    animation-delay: 5.5s;
+  }
+  :nth-of-type(9) {
+    animation-delay: 5s;
+  }
+  :nth-of-type(8) {
+    animation-delay: 4.5s;
+  }
+  :nth-of-type(7) {
+    animation-delay: 4s;
+  }
+  :nth-of-type(6) {
+    animation-delay: 3.5s;
+  }
+  :nth-of-type(5) {
+    animation-delay: 3s;
+  }
+
+  :nth-of-type(4) {
+    animation-delay: 2.5s;
+  }
+  :nth-of-type(3) {
+    animation-delay: 2s;
+  }
+  :nth-of-type(2) {
+    animation-delay: 1.5s;
+  }
+`;
+const RightPage = styled.div`
+  padding: 50px;
+  width: 512px;
+  display: flex;
+  flex-wrap: wrap;
+`;
+const SkillsIcon = styled.img`
+  width: 36px;
+  height: 36px;
+  display: block;
+  /* object-fit: cover; */
+  /* border-radius: 30px; */
+`;

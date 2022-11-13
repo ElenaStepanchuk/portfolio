@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { PageWrapper } from 'components';
+import aboutMe1 from '../../img/aboutMe/1.jpg';
 // import SocialBtn from 'components/socialBtn';
 
 const About = () => {
@@ -35,11 +36,7 @@ const About = () => {
           </Text>
         </LeftPage>
         <RightPage>
-          {/* <Text>
-            I am a hardworking and learnable person who is looking for a job in
-            an IT company with the opportunity to develop new abilities and work
-            with the latest technologies.
-          </Text> */}
+          <MyPhoto src={aboutMe1} alt="photo me" />
         </RightPage>
       </PageWrapper>
 
@@ -59,8 +56,10 @@ const LeftPage = styled.div`
 const RightPage = styled.div`
   width: 512px;
   overflow: hidden;
+  display: flex;
   justify-content: center;
-  /* padding-left: 50px; */
+  text-align: center;
+  padding: 50px;
 `;
 const animation = keyframes`
   10% {
@@ -124,4 +123,24 @@ const Text = styled.p`
   :nth-of-type(2) {
     animation-delay: 1.5s;
   }
+`;
+
+const appearance = keyframes`
+  0% {
+		opacity: 0;
+transform: scale(0);
+	}
+	100% {
+				opacity: 1;
+  transform: scale(1);
+	}
+  `;
+const MyPhoto = styled.img`
+  display: block;
+  max-height: 266px;
+  object-fit: cover;
+
+  animation-name: ${appearance};
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 `;
