@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import cssPng from '../../img/skills/css.png';
 import gitPng from '../../img/skills/git.png';
 import htmlPng from '../../img/skills/html.png';
@@ -12,9 +12,50 @@ import reactPng from '../../img/skills/react.png';
 import reduxPng from '../../img/skills/redux.png';
 import styledComponentPng from '../../img/skills/styledComponent.png';
 import webpackPng from '../../img/skills/webpack.png';
+// import { Canvas } from 'components';
+
+import { gsap } from 'gsap';
 
 import { PageWrapper } from 'components';
+
 const Skills = () => {
+  const el1 = useRef();
+  const el2 = useRef();
+  const el3 = useRef();
+
+  useEffect(() => {
+    // const arrayElements = [el1.current, el2.current];
+
+    const intervalBlock = 10;
+    const intervalImg = 10;
+    // const transactionY = 600;
+    // const transactionX = 50;
+    gsap.to(el1.current, {
+      // y: transactionY,
+      // x: transactionX,
+      repeat: -1,
+      duration: intervalBlock,
+      rotation: '+=360',
+      yoyo: true,
+    });
+    gsap.to(el2.current, {
+      // y: transactionY,
+      // x: transactionX,
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el3.current, {
+      // y: transactionY,
+      // x: transactionX,
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+  });
+
   return (
     <>
       <PageWrapper>
@@ -53,10 +94,41 @@ const Skills = () => {
           </SkillsList>
         </LeftPage>
         <RightPage>
-          <SkillsIcon src={cssPng} alt="css icon" />
-          <SkillsIcon src={gitPng} alt="git icon" />
-          <SkillsIcon src={htmlPng} alt="htm icon" />
-          <SkillsIcon src={jsPng} alt="js icon" />
+          {/* <Canvas style={{ background: '#FFFFFF' }} /> */}
+          <ContainerPng ref={el1}>
+            <SkillsIcon src={cssPng} alt="css icon" ref={el2} />
+            <SkillsIcon
+              src={gitPng}
+              alt="git icon"
+              ref={el3}
+              style={{ marginLeft: 16, marginTop: 10 }}
+            />
+            {/* <SkillsIcon
+              src={htmlPng}
+              alt="htm icon"
+              style={{ marginRight: -16, marginTop: 30 }}
+            />
+            <SkillsIcon
+              src={jsPng}
+              alt="js icon"
+              style={{ marginLeft: 26, marginTop: -30 }}
+            />
+            <SkillsIcon
+              src={jsonPng}
+              alt="json icon"
+              style={{ marginLeft: -26, marginTop: 40 }}
+            /> */}
+            {/* <SkillsIcon src={mongodbPng} alt="mongodb icon" />
+            <SkillsIcon src={nodePng} alt="node icon" />
+            <SkillsIcon src={postmanPng} alt="postman icon" />
+            <SkillsIcon src={reactPng} alt="react icon" />
+            <SkillsIcon src={reduxPng} alt="redux icon" />
+            <SkillsIcon src={styledComponentPng} alt="styled component icon" />
+            <SkillsIcon src={webpackPng} alt="webpack icon" /> */}
+          </ContainerPng>
+          {/* <SkillsIcon src={gitPng} alt="git icon" /> */}
+          {/* <SkillsIcon src={htmlPng} alt="htm icon" /> */}
+          {/* <SkillsIcon src={jsPng} alt="js icon" />
           <SkillsIcon src={jsonPng} alt="json icon" />
           <SkillsIcon src={mongodbPng} alt="mongodb icon" />
           <SkillsIcon src={nodePng} alt="node icon" />
@@ -64,7 +136,7 @@ const Skills = () => {
           <SkillsIcon src={reactPng} alt="react icon" />
           <SkillsIcon src={reduxPng} alt="redux icon" />
           <SkillsIcon src={styledComponentPng} alt="styled component icon" />
-          <SkillsIcon src={webpackPng} alt="webpack icon" />
+          <SkillsIcon src={webpackPng} alt="webpack icon" /> */}
         </RightPage>
       </PageWrapper>
     </>
@@ -206,7 +278,18 @@ const RightPage = styled.div`
   width: 512px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 `;
+
+const ContainerPng = styled.div`
+  margin: auto;
+  border: 1px solid #000000;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+`;
+
 const SkillsIcon = styled.img`
   width: 36px;
   height: 36px;

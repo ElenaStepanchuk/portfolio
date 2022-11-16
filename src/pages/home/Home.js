@@ -71,14 +71,6 @@ const Home = () => {
             <Span>.</Span>
             <Span>.</Span>
           </Text>
-
-          {/* <RightPageHome /> */}
-          {/* <canvas
-            id="canvas"
-            width="200"
-            height="100"
-            className={css.canvas_styles}
-          ></canvas> */}
         </RightPage>
       </PageWrapper>
     </>
