@@ -22,6 +22,7 @@ const Skills = () => {
   const el1 = useRef();
   const el2 = useRef();
   const el3 = useRef();
+  const el4 = useRef();
 
   useEffect(() => {
     // const arrayElements = [el1.current, el2.current];
@@ -47,6 +48,14 @@ const Skills = () => {
       yoyo: true,
     });
     gsap.to(el3.current, {
+      // y: transactionY,
+      // x: transactionX,
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el4.current, {
       // y: transactionY,
       // x: transactionX,
       repeat: -1,
@@ -103,12 +112,13 @@ const Skills = () => {
               ref={el3}
               style={{ marginLeft: 16, marginTop: 10 }}
             />
-            {/* <SkillsIcon
+            <SkillsIcon
               src={htmlPng}
               alt="htm icon"
+              ref={el4}
               style={{ marginRight: -16, marginTop: 30 }}
             />
-            <SkillsIcon
+            {/* <SkillsIcon
               src={jsPng}
               alt="js icon"
               style={{ marginLeft: 26, marginTop: -30 }}
