@@ -24,6 +24,14 @@ const Skills = () => {
   const el3 = useRef();
   const el4 = useRef();
   const el5 = useRef();
+  const el6 = useRef();
+  const el7 = useRef();
+  const el8 = useRef();
+  const el9 = useRef();
+  const el10 = useRef();
+  const el11 = useRef();
+  const el12 = useRef();
+  const el13 = useRef();
 
   useEffect(() => {
     const arrayElements = [
@@ -34,41 +42,89 @@ const Skills = () => {
       el5.current,
     ];
 
-    const intervalBlock = 10;
-    const intervalImg = 10;
+    const intervalBlock = 120;
+    const intervalImg = 120;
     // const transactionY = 600;
     // const transactionX = 50;
 
-    // gsap.to(el1.current, {
-    //   repeat: -1,
-    //   duration: intervalBlock,
-    //   rotation: '+=360',
-    //   yoyo: true,
-    // });
-    // gsap.to(el2.current, {
-    //   repeat: -1,
-    //   duration: intervalImg,
-    //   rotation: '-=360',
-    //   yoyo: true,
-    // });
-    // gsap.to(el3.current, {
-    //   repeat: -1,
-    //   duration: intervalImg,
-    //   rotation: '-=360',
-    //   yoyo: true,
-    // });
-    // gsap.to(el4.current, {
-    //   repeat: -1,
-    //   duration: intervalImg,
-    //   rotation: '-=360',
-    //   yoyo: true,
-    // });
-    // gsap.to(el5.current, {
-    //   repeat: -1,
-    //   duration: intervalImg,
-    //   rotation: '-=360',
-    //   yoyo: true,
-    // });
+    gsap.to(el1.current, {
+      repeat: -1,
+      duration: intervalBlock,
+      rotation: '+=360',
+      yoyo: true,
+    });
+    gsap.to(el2.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el3.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el4.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el5.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el6.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el7.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el8.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el9.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el10.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el11.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el12.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
+    gsap.to(el13.current, {
+      repeat: -1,
+      duration: intervalImg,
+      rotation: '-=360',
+      yoyo: true,
+    });
   });
 
   return (
@@ -111,43 +167,112 @@ const Skills = () => {
         <RightPage>
           {/* <Canvas style={{ background: '#FFFFFF' }} /> */}
           <ContainerPng ref={el1}>
-            <ContainerPng1 ref={el1} style={{ width: 80, height: 80 }}>
+            <ContainerPng1
+              style={{ width: 50, height: 50, background: 'rgba(121,99,78,1)' }}
+            ></ContainerPng1>
+            <ContainerPng1
+              style={{
+                width: 100,
+                height: 100,
+                marginTop: -25,
+                marginLeft: -25,
+              }}
+            >
               <SkillsIcon src={cssPng} alt="css icon" ref={el2} />
-            </ContainerPng1>
-            <ContainerPng1 ref={el1} style={{ width: 100, height: 100 }}>
               <SkillsIcon
                 src={gitPng}
                 alt="git icon"
-                // ref={el3}
-                // style={{ marginLeft: 16, marginTop: 10 }}
+                ref={el3}
+                style={{ marginLeft: 78 }}
               />
             </ContainerPng1>
-            <ContainerPng1 ref={el1} style={{ width: 120, height: 120 }}>
+            <ContainerPng1
+              style={{
+                width: 150,
+                height: 150,
+                marginTop: -50,
+                marginLeft: -50,
+              }}
+            >
               <SkillsIcon
                 src={htmlPng}
                 alt="htm icon"
-                // ref={el4}
-                // style={{ marginRight: -16, marginTop: 30 }}
+                ref={el4}
+                style={{ marginTop: 70, marginLeft: -15 }}
+              />
+              <SkillsIcon
+                src={jsPng}
+                alt="js icon"
+                ref={el5}
+                style={{ marginTop: -115, marginLeft: 80 }}
               />
             </ContainerPng1>
-            <SkillsIcon
-              src={jsPng}
-              alt="js icon"
-              ref={el5}
-              style={{ marginLeft: 48, marginTop: -30 }}
-            />
-            <SkillsIcon
-              src={jsonPng}
-              alt="json icon"
-              style={{ marginLeft: -26, marginTop: 40 }}
-            />
-            <SkillsIcon src={mongodbPng} alt="mongodb icon" />
-            <SkillsIcon src={nodePng} alt="node icon" />
-            <SkillsIcon src={postmanPng} alt="postman icon" />
-            <SkillsIcon src={reactPng} alt="react icon" />
-            <SkillsIcon src={reduxPng} alt="redux icon" />
-            <SkillsIcon src={styledComponentPng} alt="styled component icon" />
-            <SkillsIcon src={webpackPng} alt="webpack icon" />
+            <ContainerPng1
+              style={{
+                width: 210,
+                height: 210,
+                marginTop: -80,
+                marginLeft: -80,
+              }}
+            >
+              <SkillsIcon
+                src={jsonPng}
+                alt="json icon"
+                style={{ marginTop: 30 }}
+                ref={el6}
+              />
+              <SkillsIcon
+                src={mongodbPng}
+                alt="mongodb icon"
+                style={{ marginTop: 0, marginLeft: 190 }}
+                ref={el7}
+              />
+              <SkillsIcon
+                src={nodePng}
+                alt="node icon"
+                style={{ marginTop: 60, marginLeft: 120 }}
+                ref={el8}
+              />
+            </ContainerPng1>
+            <ContainerPng1
+              style={{
+                width: 280,
+                height: 280,
+                marginTop: -115,
+                marginLeft: -115,
+              }}
+            >
+              <SkillsIcon
+                src={postmanPng}
+                alt="postman icon"
+                style={{ marginTop: -15, marginLeft: 100 }}
+                ref={el9}
+              />
+              <SkillsIcon
+                src={reactPng}
+                alt="react icon"
+                style={{ marginTop: 30, marginLeft: 240 }}
+                ref={el10}
+              />
+              <SkillsIcon
+                src={reduxPng}
+                alt="redux icon"
+                style={{ marginTop: 120, marginLeft: 240 }}
+                ref={el11}
+              />
+              <SkillsIcon
+                src={styledComponentPng}
+                alt="styled component icon"
+                style={{ marginTop: 25, marginLeft: 90 }}
+                ref={el12}
+              />
+              <SkillsIcon
+                src={webpackPng}
+                alt="webpack icon"
+                style={{ marginTop: -110, marginLeft: -5 }}
+                ref={el13}
+              />
+            </ContainerPng1>
           </ContainerPng>
           {/* <SkillsIcon src={gitPng} alt="git icon" /> */}
           {/* <SkillsIcon src={htmlPng} alt="htm icon" /> */}
@@ -304,25 +429,23 @@ const RightPage = styled.div`
 const ContainerPng = styled.div`
   margin: auto;
   position: relative;
-  border: 1px solid #000000;
   width: 100%;
   height: 100%;
-  // border-radius: 50%;
 `;
 const ContainerPng1 = styled.div`
   // margin: auto;
   position: absolute;
-  top: calc(33% + 20px);
-  left: calc(33% + 20px);
-  border: 1px solid #000000;
+  top: calc(42%);
+  left: calc(44%);
+  border: 1px solid rgba(121, 99, 78, 1);
   // width: 140px;
   // height: 140px;
   border-radius: 50%;
 `;
 
 const SkillsIcon = styled.img`
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: block;
   /* object-fit: cover; */
   /* border-radius: 30px; */
