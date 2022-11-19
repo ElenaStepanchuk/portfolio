@@ -14,17 +14,13 @@ const Skills = lazy(() => import('../pages/skills/Skills'));
 const MyWork = lazy(() => import('../pages/myWork/MyWork'));
 const Contact = lazy(() => import('../pages/contact/Contact'));
 
-// import { Home, About, Skills, MyWork, Contact } from '../pages';
-
 export const App = () => {
   return (
     <>
       <DollarsAnimation />
       <BackgroundContainer>
         <Header />
-
         <Suspense fallback={<Loader />}>
-          {/* <DollarsAnimation /> */}
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="home" index element={<Home />} />

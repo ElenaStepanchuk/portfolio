@@ -23,46 +23,52 @@ const Skills = () => {
   const el2 = useRef();
   const el3 = useRef();
   const el4 = useRef();
+  const el5 = useRef();
 
   useEffect(() => {
-    // const arrayElements = [el1.current, el2.current];
+    const arrayElements = [
+      el1.current,
+      el2.current,
+      el3.current,
+      el4.current,
+      el5.current,
+    ];
 
     const intervalBlock = 10;
     const intervalImg = 10;
     // const transactionY = 600;
     // const transactionX = 50;
-    gsap.to(el1.current, {
-      // y: transactionY,
-      // x: transactionX,
-      repeat: -1,
-      duration: intervalBlock,
-      rotation: '+=360',
-      yoyo: true,
-    });
-    gsap.to(el2.current, {
-      // y: transactionY,
-      // x: transactionX,
-      repeat: -1,
-      duration: intervalImg,
-      rotation: '-=360',
-      yoyo: true,
-    });
-    gsap.to(el3.current, {
-      // y: transactionY,
-      // x: transactionX,
-      repeat: -1,
-      duration: intervalImg,
-      rotation: '-=360',
-      yoyo: true,
-    });
-    gsap.to(el4.current, {
-      // y: transactionY,
-      // x: transactionX,
-      repeat: -1,
-      duration: intervalImg,
-      rotation: '-=360',
-      yoyo: true,
-    });
+
+    // gsap.to(el1.current, {
+    //   repeat: -1,
+    //   duration: intervalBlock,
+    //   rotation: '+=360',
+    //   yoyo: true,
+    // });
+    // gsap.to(el2.current, {
+    //   repeat: -1,
+    //   duration: intervalImg,
+    //   rotation: '-=360',
+    //   yoyo: true,
+    // });
+    // gsap.to(el3.current, {
+    //   repeat: -1,
+    //   duration: intervalImg,
+    //   rotation: '-=360',
+    //   yoyo: true,
+    // });
+    // gsap.to(el4.current, {
+    //   repeat: -1,
+    //   duration: intervalImg,
+    //   rotation: '-=360',
+    //   yoyo: true,
+    // });
+    // gsap.to(el5.current, {
+    //   repeat: -1,
+    //   duration: intervalImg,
+    //   rotation: '-=360',
+    //   yoyo: true,
+    // });
   });
 
   return (
@@ -105,36 +111,43 @@ const Skills = () => {
         <RightPage>
           {/* <Canvas style={{ background: '#FFFFFF' }} /> */}
           <ContainerPng ref={el1}>
-            <SkillsIcon src={cssPng} alt="css icon" ref={el2} />
+            <ContainerPng1 ref={el1} style={{ width: 80, height: 80 }}>
+              <SkillsIcon src={cssPng} alt="css icon" ref={el2} />
+            </ContainerPng1>
+            <ContainerPng1 ref={el1} style={{ width: 100, height: 100 }}>
+              <SkillsIcon
+                src={gitPng}
+                alt="git icon"
+                // ref={el3}
+                // style={{ marginLeft: 16, marginTop: 10 }}
+              />
+            </ContainerPng1>
+            <ContainerPng1 ref={el1} style={{ width: 120, height: 120 }}>
+              <SkillsIcon
+                src={htmlPng}
+                alt="htm icon"
+                // ref={el4}
+                // style={{ marginRight: -16, marginTop: 30 }}
+              />
+            </ContainerPng1>
             <SkillsIcon
-              src={gitPng}
-              alt="git icon"
-              ref={el3}
-              style={{ marginLeft: 16, marginTop: 10 }}
-            />
-            <SkillsIcon
-              src={htmlPng}
-              alt="htm icon"
-              ref={el4}
-              style={{ marginRight: -16, marginTop: 30 }}
-            />
-            {/* <SkillsIcon
               src={jsPng}
               alt="js icon"
-              style={{ marginLeft: 26, marginTop: -30 }}
+              ref={el5}
+              style={{ marginLeft: 48, marginTop: -30 }}
             />
             <SkillsIcon
               src={jsonPng}
               alt="json icon"
               style={{ marginLeft: -26, marginTop: 40 }}
-            /> */}
-            {/* <SkillsIcon src={mongodbPng} alt="mongodb icon" />
+            />
+            <SkillsIcon src={mongodbPng} alt="mongodb icon" />
             <SkillsIcon src={nodePng} alt="node icon" />
             <SkillsIcon src={postmanPng} alt="postman icon" />
             <SkillsIcon src={reactPng} alt="react icon" />
             <SkillsIcon src={reduxPng} alt="redux icon" />
             <SkillsIcon src={styledComponentPng} alt="styled component icon" />
-            <SkillsIcon src={webpackPng} alt="webpack icon" /> */}
+            <SkillsIcon src={webpackPng} alt="webpack icon" />
           </ContainerPng>
           {/* <SkillsIcon src={gitPng} alt="git icon" /> */}
           {/* <SkillsIcon src={htmlPng} alt="htm icon" /> */}
@@ -155,11 +168,8 @@ const Skills = () => {
 export default Skills;
 
 const LeftPage = styled.div`
-  /* display: flex; */
   width: 512px;
-  /* justify-content: center; */
   padding: 50px;
-  /* flex-wrap: wrap; */
 `;
 const animation = keyframes`
   10% {
@@ -219,7 +229,6 @@ const ItemList = styled.li`
   font-size: 12px;
   font-weight: bold;
   text-align: justify;
-  /* display: inline-block;s */
   opacity: 0;
   transform: rotate(-5deg) translate(-650px, 0);
   animation: ${animation} 1s forwards;
@@ -294,9 +303,20 @@ const RightPage = styled.div`
 
 const ContainerPng = styled.div`
   margin: auto;
+  position: relative;
   border: 1px solid #000000;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
+  // border-radius: 50%;
+`;
+const ContainerPng1 = styled.div`
+  // margin: auto;
+  position: absolute;
+  top: calc(33% + 20px);
+  left: calc(33% + 20px);
+  border: 1px solid #000000;
+  // width: 140px;
+  // height: 140px;
   border-radius: 50%;
 `;
 
