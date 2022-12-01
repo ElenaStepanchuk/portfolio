@@ -230,7 +230,7 @@ const Skills = () => {
               <SkillsIcon
                 src={nodePng}
                 alt="node icon"
-                style={{ marginTop: 60, marginLeft: 120 }}
+                style={{ marginTop: 95, marginLeft: 120 }}
                 ref={el8}
               />
             </ContainerPng1>
@@ -274,17 +274,6 @@ const Skills = () => {
               />
             </ContainerPng1>
           </ContainerPng>
-          {/* <SkillsIcon src={gitPng} alt="git icon" /> */}
-          {/* <SkillsIcon src={htmlPng} alt="htm icon" /> */}
-          {/* <SkillsIcon src={jsPng} alt="js icon" />
-          <SkillsIcon src={jsonPng} alt="json icon" />
-          <SkillsIcon src={mongodbPng} alt="mongodb icon" />
-          <SkillsIcon src={nodePng} alt="node icon" />
-          <SkillsIcon src={postmanPng} alt="postman icon" />
-          <SkillsIcon src={reactPng} alt="react icon" />
-          <SkillsIcon src={reduxPng} alt="redux icon" />
-          <SkillsIcon src={styledComponentPng} alt="styled component icon" />
-          <SkillsIcon src={webpackPng} alt="webpack icon" /> */}
         </RightPage>
       </PageWrapper>
     </>
