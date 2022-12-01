@@ -11,6 +11,48 @@ import mooviesFinder from '../../img/myWorks/moviesFinderPng.png';
 import phonebook from '../../img/myWorks/phonebookPng.png';
 
 const MyWork = () => {
+  const el1 = useRef();
+  const el2 = useRef();
+  const el3 = useRef();
+  // useEffect(() => {
+  //   const arrayElements = [el1.current, el2.current, el3.current];
+
+  // const intervalBlock = 2;
+  // const intervalImg = 120;
+  // gsap.to(el1.current, {
+  //   duration: intervalBlock,
+  //   x: 290,
+  // });
+  // });
+  const arrayElements = [el1, el2, el3];
+  const LeftButton = event => {
+    console.log('arrayElements', arrayElements);
+    const intervalBlock = 2;
+    const sliders = 2;
+    for (let i = 0; i < sliders; i++) {
+      const element = arrayElements[i];
+      const element2 = arrayElements[i + 1];
+      gsap.to(element.current, {
+        duration: intervalBlock,
+        x: 290 * i,
+      });
+      gsap.to(element2.current, {
+        duration: intervalBlock,
+        x: -290 * i,
+      });
+    }
+  };
+  const RightButton = () => {
+    const intervalBlock = 2;
+    gsap.to(el1.current, {
+      duration: intervalBlock,
+      x: 0,
+    });
+    gsap.to(el2.current, {
+      duration: intervalBlock,
+      x: 290,
+    });
+  };
   return (
     <>
       <PageWrapper>
@@ -31,58 +73,55 @@ const MyWork = () => {
           <Span>c</Span>
           <Span>t</Span>
           <Span>s</Span>
-          <Ul>
-            <LeftPageItem>
-              <LinkItem href="https://elenastepanchuk.github.io/goit-markup-hw-08/index.html">
-                <WorkImg
-                  src={webStudio}
-                  alt="json icon"
-                  style={{ width: 412 }}
-                />
-                Web Studio
-              </LinkItem>
-            </LeftPageItem>
-            <LeftPageItem>
-              <LinkItem href="https://elenastepanchuk.github.io/goit-js-hw-11/">
-                <WorkImg
-                  src={serchPhotos}
-                  alt="json icon"
-                  style={{ width: 412 }}
-                />
-                Serch photos
-              </LinkItem>
-            </LeftPageItem>
-            <LeftPageItem>
-              <LinkItem href="https://elenastepanchuk.github.io/goit-react-hw-04-hooks-images/">
-                <WorkImg
-                  src={finderPhotos}
-                  alt="json icon"
-                  style={{ width: 412 }}
-                />
-                Finder photos
-              </LinkItem>
-            </LeftPageItem>
-            <LeftPageItem>
-              <LinkItem href="https://elenastepanchuk365.netlify.app/">
-                <WorkImg
-                  src={mooviesFinder}
-                  alt="json icon"
-                  style={{ width: 412 }}
-                />
-                Movies finder
-              </LinkItem>
-            </LeftPageItem>
-            <LeftPageItem>
-              <LinkItem href="https://olenatepanchukhw8.netlify.app/">
-                <WorkImg
-                  src={phonebook}
-                  alt="json icon"
-                  style={{ width: 412 }}
-                />
-                Phonebook
-              </LinkItem>
-            </LeftPageItem>
-          </Ul>
+          <UlWrapper>
+            <ControlButton type="button" onClick={LeftButton}>
+              Left
+            </ControlButton>
+            <Ul>
+              <LeftPageItem>
+                <LinkItem
+                  href="https://elenastepanchuk.github.io/goit-markup-hw-08/index.html"
+                  ref={el1}
+                >
+                  <WorkImg src={webStudio} alt="json icon" />
+                  Web Studio
+                </LinkItem>
+              </LeftPageItem>
+              <LeftPageItem>
+                <LinkItem
+                  href="https://elenastepanchuk.github.io/goit-js-hw-11/"
+                  ref={el2}
+                >
+                  <WorkImg src={serchPhotos} alt="json icon" />
+                  Serch photos
+                </LinkItem>
+              </LeftPageItem>
+              <LeftPageItem>
+                <LinkItem
+                  href="https://elenastepanchuk.github.io/goit-react-hw-04-hooks-images/"
+                  ref={el3}
+                >
+                  <WorkImg src={finderPhotos} alt="json icon" />
+                  Finder photos
+                </LinkItem>
+              </LeftPageItem>
+              {/* <LeftPageItem>
+                <LinkItem href="https://elenastepanchuk365.netlify.app/">
+                  <WorkImg src={mooviesFinder} alt="json icon" />
+                  Movies finder
+                </LinkItem>
+              </LeftPageItem>
+              <LeftPageItem>
+                <LinkItem href="https://olenatepanchukhw8.netlify.app/">
+                  <WorkImg src={phonebook} alt="json icon" />
+                  Phonebook
+                </LinkItem>
+              </LeftPageItem> */}
+            </Ul>
+            <ControlButton type="button" onClick={RightButton}>
+              Right
+            </ControlButton>
+          </UlWrapper>
         </LeftPage>
         <RightPage>
           {/* <img src={gitHubRight} alt="json icon" style={{ width: 512 }} /> */}
@@ -113,11 +152,6 @@ const LeftPage = styled.div`
   // justify-content: center;
   text-align: center;
 `;
-const Ul = styled.ul`
-  height: 240px;
-  overflow: auto;
-`;
-
 const animation = keyframes`
   10% {
 		opacity: 1;
@@ -180,10 +214,32 @@ const Span = styled.span`
     animation-delay: 0.7s;
   }
 `;
+const ControlButton = styled.button`
+  width: 45px;
+  height: 30px;
+  padding: 5px;
+  font-size: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+`;
+const UlWrapper = styled.div`
+  display: flex;
+`;
+const Ul = styled.ul`
+  overflow: hidden;
+  display: flex;
+`;
+
 const LeftPageItem = styled.li`
   display: flex;
+  justify-content: center;
+  /* position: absolute; */
+  /* z-index: 1; */
   :not(:last-child) {
-    margin-bottom: 10px;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
   }
   // flex-wrap: wrap;
 `;
@@ -194,11 +250,15 @@ const LinkItem = styled.a`
   font-weight: bold;
   text-align: center;
   justify-content: center;
+  /* opacity: 0; */
 `;
+
 const WorkImg = styled.img`
+  width: 290px;
   display: block;
   margin-bottom: 10px;
 `;
+
 const RightPage = styled.div`
   padding: 50px;
   width: 512px;
