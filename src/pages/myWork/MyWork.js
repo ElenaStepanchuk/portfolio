@@ -25,20 +25,20 @@ const MyWork = () => {
   // });
   // });
   const arrayElements = [el1, el2, el3];
-  const LeftButton = event => {
+  const LeftButton = () => {
     console.log('arrayElements', arrayElements);
     const intervalBlock = 2;
-    const sliders = 2;
+    const sliders = 3;
     for (let i = 0; i < sliders; i++) {
       const element = arrayElements[i];
       const element2 = arrayElements[i + 1];
       gsap.to(element.current, {
         duration: intervalBlock,
-        x: 290 * i,
+        x: 290,
       });
       gsap.to(element2.current, {
         duration: intervalBlock,
-        x: -290 * i,
+        x: -290,
       });
     }
   };
