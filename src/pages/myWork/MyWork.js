@@ -9,49 +9,59 @@ import serchPhotos from '../../img/myWorks/serchPhotoPng.png';
 import finderPhotos from '../../img/myWorks/imageFinderPng.png';
 import mooviesFinder from '../../img/myWorks/moviesFinderPng.png';
 import phonebook from '../../img/myWorks/phonebookPng.png';
+// import { xPercent } from 'gsap';
+// gsap.registerPlugin(xPercent);
 
 const MyWork = () => {
   const el1 = useRef();
   const el2 = useRef();
   const el3 = useRef();
-  // useEffect(() => {
-  //   const arrayElements = [el1.current, el2.current, el3.current];
 
-  // const intervalBlock = 2;
-  // const intervalImg = 120;
-  // gsap.to(el1.current, {
-  //   duration: intervalBlock,
-  //   x: 290,
-  // });
-  // });
+  let count = 0;
+
   const arrayElements = [el1, el2, el3];
+  gsap.set(arrayElements, { xPercent: 100 });
+  gsap.set(arrayElements[0], { xPercent: 0 });
   const LeftButton = () => {
-    console.log('arrayElements', arrayElements);
-    const intervalBlock = 2;
-    const sliders = 3;
-    for (let i = 0; i < sliders; i++) {
-      const element = arrayElements[i];
-      const element2 = arrayElements[i + 1];
-      gsap.to(element.current, {
-        duration: intervalBlock,
-        x: 290,
-      });
-      gsap.to(element2.current, {
-        duration: intervalBlock,
-        x: -290,
-      });
-    }
+    // console.log('arrayElements', arrayElements);
+    // const intervalBlock = 2;
+    // const sliders = 3;
+    // for (let i = 0; i < sliders; i++) {
+    //   const element = arrayElements[i];
+    //   gsap.to(element.current, {
+    //     duration: intervalBlock,
+    //     x: 290,
+    //   });
+    // }
+    // for (let i = 1; i < sliders; i++) {
+    //   const element = arrayElements[i];
+    //   gsap.to(element.current, {
+    //     duration: intervalBlock,
+    //     x: -290,
+    //   });
+    // }
+    gsap.fromTo(
+      arrayElements[count],
+      { xPercent: 0, zIndex: 0 },
+      { delay: 0.2, duration: 1.2, xPercent: 0, zIndex: -10 }
+    );
+    count = count < arrayElements.length - 1 ? ++count : 0;
+    gsap.fromTo(
+      arrayElements[count],
+      { xPercent: 100, zIndex: 10 },
+      { duration: 1.2, xPercent: 0, zIndex: 0 }
+    );
   };
   const RightButton = () => {
-    const intervalBlock = 2;
-    gsap.to(el1.current, {
-      duration: intervalBlock,
-      x: 0,
-    });
-    gsap.to(el2.current, {
-      duration: intervalBlock,
-      x: 290,
-    });
+    // const intervalBlock = 2;
+    // gsap.to(el1.current, {
+    //   duration: intervalBlock,
+    //   x: 0,
+    // });
+    // gsap.to(el2.current, {
+    //   duration: intervalBlock,
+    //   x: 290,
+    // });
   };
   return (
     <>
