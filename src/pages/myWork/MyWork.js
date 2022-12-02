@@ -2,8 +2,10 @@ import { gsap } from 'gsap';
 
 import { PageWrapper } from 'components';
 
+import css from './myWork.module.css';
+
 import styled, { keyframes } from 'styled-components';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import webStudio from '../../img/myWorks/webStudioPng.png';
 import serchPhotos from '../../img/myWorks/serchPhotoPng.png';
 import finderPhotos from '../../img/myWorks/imageFinderPng.png';
@@ -13,62 +15,37 @@ import { CSSPlugin } from 'gsap/CSSPlugin';
 gsap.registerPlugin(CSSPlugin);
 
 const MyWork = () => {
-  // console.log('arrayElements', arrayElements);
-  // const intervalBlock = 2;
-  // const sliders = 3;
-  // for (let i = 0; i < sliders; i++) {
-  //   const element = arrayElements[i];
-  //   gsap.to(element.current, {
-  //     duration: intervalBlock,
-  //     x: 290,
-  //   });
-  // }
-  // for (let i = 1; i < sliders; i++) {
-  //   const element = arrayElements[i];
-  //   gsap.to(element.current, {
-  //     duration: intervalBlock,
-  //     x: -290,
-  //   });
-  // }
-
   const el1 = useRef();
   const el2 = useRef();
   const el3 = useRef();
+  const el4 = useRef();
+  const el5 = useRef();
 
   let count = 0;
 
-  const arrayElements = [el1, el2, el3];
+  const arrayElements = [el1, el2, el3, el4, el5];
   gsap.set(arrayElements, { xPercent: 100 });
   gsap.set(arrayElements[0], { xPercent: 0 });
+
   const LeftButton = () => {
-    gsap.fromTo(
-      arrayElements[count],
-      { xPercent: 0, zIndex: 0 },
-      { delay: 0.2, duration: 1.2, xPercent: 0, zIndex: -10 }
-    );
-    count = count < arrayElements.length - 1 ? ++count : 0;
-    gsap.fromTo(
-      arrayElements[count],
-      { xPercent: 100, zIndex: 10 },
-      { duration: 1.2, xPercent: 0, zIndex: 0 }
-    );
+    // gsap.fromTo(
+    //   arrayElements[count],
+    //   { xPercent: 0, zIndex: 0 },
+    //   { delay: 0.2, duration: 1.2, xPercent: 0, zIndex: -10 }
+    // );
+    // count = count < arrayElements.length - 1 ? ++count : 0;
+    // gsap.fromTo(
+    //   arrayElements[count],
+    //   { xPercent: 100, zIndex: 10 },
+    //   { duration: 1.2, xPercent: 0, zIndex: 0 }
+    // );
   };
-  const RightButton = () => {
-    // const intervalBlock = 2;
-    // gsap.to(el1.current, {
-    //   duration: intervalBlock,
-    //   x: 0,
-    // });
-    // gsap.to(el2.current, {
-    //   duration: intervalBlock,
-    //   x: 290,
-    // });
-  };
+  const RightButton = () => {};
+
   return (
     <>
       <PageWrapper>
-        <LeftPage>
-          {/* <img src={gitHubLeft} alt="json icon" style={{ width: 512 }} /> */}
+        <div className={css.left_page}>
           <Span>M</Span>
           <Span>y</Span>
           <Span>&nbsp;</Span>
@@ -84,57 +61,96 @@ const MyWork = () => {
           <Span>c</Span>
           <Span>t</Span>
           <Span>s</Span>
-          <UlWrapper>
-            <ControlButton type="button" onClick={LeftButton}>
+          <div className={css.list_wrapper}>
+            <button
+              className={css.control_button}
+              type="button"
+              onClick={LeftButton}
+            >
               Left
-            </ControlButton>
-            <Ul>
-              <LeftPageItem>
-                <LinkItem
+            </button>
+            <ul className={css.list}>
+              <li className={css.item}>
+                <a
+                  className={css.item_link}
                   href="https://elenastepanchuk.github.io/goit-markup-hw-08/index.html"
                   ref={el1}
                 >
-                  <WorkImg src={webStudio} alt="json icon" />
+                  <img
+                    className={css.item_img}
+                    src={webStudio}
+                    alt="json icon"
+                  />
                   Web Studio
-                </LinkItem>
-              </LeftPageItem>
-              <LeftPageItem>
-                <LinkItem
+                </a>
+              </li>
+              <li className={css.item}>
+                <a
+                  className={css.item_link}
                   href="https://elenastepanchuk.github.io/goit-js-hw-11/"
                   ref={el2}
                 >
-                  <WorkImg src={serchPhotos} alt="json icon" />
+                  <img
+                    className={css.item_img}
+                    src={serchPhotos}
+                    alt="json icon"
+                  />
                   Serch photos
-                </LinkItem>
-              </LeftPageItem>
-              <LeftPageItem>
-                <LinkItem
+                </a>
+              </li>
+              <li className={css.item}>
+                <a
+                  className={css.item_link}
                   href="https://elenastepanchuk.github.io/goit-react-hw-04-hooks-images/"
                   ref={el3}
                 >
-                  <WorkImg src={finderPhotos} alt="json icon" />
+                  <img
+                    className={css.item_img}
+                    src={finderPhotos}
+                    alt="json icon"
+                  />
                   Finder photos
-                </LinkItem>
-              </LeftPageItem>
-              {/* <LeftPageItem>
-                <LinkItem href="https://elenastepanchuk365.netlify.app/">
-                  <WorkImg src={mooviesFinder} alt="json icon" />
+                </a>
+              </li>
+              <li className={css.item}>
+                <a
+                  className={css.item_link}
+                  href="https://elenastepanchuk365.netlify.app/"
+                  ref={el4}
+                >
+                  <img
+                    className={css.item_img}
+                    src={mooviesFinder}
+                    alt="json icon"
+                  />
                   Movies finder
-                </LinkItem>
-              </LeftPageItem>
-              <LeftPageItem>
-                <LinkItem href="https://olenatepanchukhw8.netlify.app/">
-                  <WorkImg src={phonebook} alt="json icon" />
+                </a>
+              </li>
+              <li className={css.item}>
+                <a
+                  className={css.item_link}
+                  href="https://olenatepanchukhw8.netlify.app/"
+                  ref={el5}
+                >
+                  <img
+                    className={css.item_img}
+                    src={phonebook}
+                    alt="json icon"
+                  />
                   Phonebook
-                </LinkItem>
-              </LeftPageItem> */}
-            </Ul>
-            <ControlButton type="button" onClick={RightButton}>
+                </a>
+              </li>
+            </ul>
+            <button
+              className={css.control_button}
+              type="button"
+              onClick={RightButton}
+            >
               Right
-            </ControlButton>
-          </UlWrapper>
-        </LeftPage>
-        <RightPage>
+            </button>
+          </div>
+        </div>
+        <div className={css.right_page}>
           {/* <img src={gitHubRight} alt="json icon" style={{ width: 512 }} /> */}
           <h2>Command projects</h2>
           <ul>
@@ -150,19 +166,14 @@ const MyWork = () => {
               </a>
             </li>
           </ul>
-        </RightPage>
+        </div>
       </PageWrapper>
     </>
   );
 };
 export default MyWork;
 
-const LeftPage = styled.div`
-  width: 512px;
-  padding: 50px;
-  // justify-content: center;
-  text-align: center;
-`;
+//анімація лівої назви сторінки
 const animation = keyframes`
   10% {
 		opacity: 1;
@@ -224,57 +235,4 @@ const Span = styled.span`
   :nth-of-type(15) {
     animation-delay: 0.7s;
   }
-`;
-const ControlButton = styled.button`
-  width: 45px;
-  height: 30px;
-  padding: 5px;
-  font-size: 15px;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
-`;
-const UlWrapper = styled.div`
-  display: flex;
-`;
-const Ul = styled.ul`
-  overflow: hidden;
-  display: flex;
-`;
-
-const LeftPageItem = styled.li`
-  display: flex;
-  justify-content: center;
-  /* position: absolute; */
-  /* z-index: 1; */
-  :not(:last-child) {
-    /* margin-left: 10px; */
-    /* margin-right: 10px; */
-  }
-  // flex-wrap: wrap;
-`;
-const LinkItem = styled.a`
-  color: rgba(121, 99, 78, 1);
-  font-style: italic;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  justify-content: center;
-  /* opacity: 0; */
-`;
-
-const WorkImg = styled.img`
-  width: 290px;
-  display: block;
-  margin-bottom: 10px;
-`;
-
-const RightPage = styled.div`
-  padding: 50px;
-  width: 512px;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // text-align: center;
 `;

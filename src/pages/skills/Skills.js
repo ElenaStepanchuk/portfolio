@@ -34,13 +34,13 @@ const Skills = () => {
   const el13 = useRef();
 
   useEffect(() => {
-    const arrayElements = [
-      el1.current,
-      el2.current,
-      el3.current,
-      el4.current,
-      el5.current,
-    ];
+    // const arrayElements = [
+    //   el1.current,
+    //   el2.current,
+    //   el3.current,
+    //   el4.current,
+    //   el5.current,
+    // ];
 
     const intervalBlock = 120;
     const intervalImg = 120;
