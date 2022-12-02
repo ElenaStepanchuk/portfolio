@@ -9,8 +9,8 @@ import serchPhotos from '../../img/myWorks/serchPhotoPng.png';
 import finderPhotos from '../../img/myWorks/imageFinderPng.png';
 import mooviesFinder from '../../img/myWorks/moviesFinderPng.png';
 import phonebook from '../../img/myWorks/phonebookPng.png';
-// import { xPercent } from 'gsap';
-// gsap.registerPlugin(xPercent);
+import { CSSPlugin } from 'gsap/CSSPlugin';
+gsap.registerPlugin(CSSPlugin);
 
 const MyWork = () => {
   const el1 = useRef();
