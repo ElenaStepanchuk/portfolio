@@ -13,6 +13,24 @@ import { CSSPlugin } from 'gsap/CSSPlugin';
 gsap.registerPlugin(CSSPlugin);
 
 const MyWork = () => {
+  // console.log('arrayElements', arrayElements);
+  // const intervalBlock = 2;
+  // const sliders = 3;
+  // for (let i = 0; i < sliders; i++) {
+  //   const element = arrayElements[i];
+  //   gsap.to(element.current, {
+  //     duration: intervalBlock,
+  //     x: 290,
+  //   });
+  // }
+  // for (let i = 1; i < sliders; i++) {
+  //   const element = arrayElements[i];
+  //   gsap.to(element.current, {
+  //     duration: intervalBlock,
+  //     x: -290,
+  //   });
+  // }
+
   const el1 = useRef();
   const el2 = useRef();
   const el3 = useRef();
@@ -23,23 +41,6 @@ const MyWork = () => {
   gsap.set(arrayElements, { xPercent: 100 });
   gsap.set(arrayElements[0], { xPercent: 0 });
   const LeftButton = () => {
-    // console.log('arrayElements', arrayElements);
-    // const intervalBlock = 2;
-    // const sliders = 3;
-    // for (let i = 0; i < sliders; i++) {
-    //   const element = arrayElements[i];
-    //   gsap.to(element.current, {
-    //     duration: intervalBlock,
-    //     x: 290,
-    //   });
-    // }
-    // for (let i = 1; i < sliders; i++) {
-    //   const element = arrayElements[i];
-    //   gsap.to(element.current, {
-    //     duration: intervalBlock,
-    //     x: -290,
-    //   });
-    // }
     gsap.fromTo(
       arrayElements[count],
       { xPercent: 0, zIndex: 0 },
