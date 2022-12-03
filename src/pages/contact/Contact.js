@@ -1,8 +1,11 @@
 import { PageWrapper } from 'components';
 import { gsap } from 'gsap';
+import React, { useRef, useEffect, useLayoutEffect } from 'react';
 import './contact.css';
 
 const Contact = () => {
+  const contact = useRef();
+
   console.clear();
   let count = 0;
   const targets = document.querySelectorAll('.box');
@@ -47,16 +50,16 @@ const Contact = () => {
 
   return (
     <PageWrapper>
-      <div class="left_page">
+      <div className="left_page">
         <h1>My contacts page</h1>
-        <div class="box-container">
-          <div class="box box01">SLIDE-01</div>
-          <div class="box box02">SLIDE-02</div>
-          <div class="box box03">SLIDE-03</div>
-          <div class="box box04">SLIDE-04</div>
+        <div className="box-container">
+          <div className="box box01">SLIDE-01</div>
+          <div className="box box02">SLIDE-02</div>
+          <div className="box box03">SLIDE-03</div>
+          <div className="box box04">SLIDE-04</div>
         </div>
 
-        <div class="controls">
+        <div className="controls">
           <button id="prevButton" onClick={slideOnePrev}>
             Prev
           </button>
@@ -65,7 +68,7 @@ const Contact = () => {
           </button>
         </div>
       </div>
-      <div class="right_page"></div>
+      <div className="right_page"></div>
     </PageWrapper>
   );
 };
