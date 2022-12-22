@@ -1,75 +1,94 @@
 import { PageWrapper } from 'components';
-import { gsap } from 'gsap';
-import React, { useRef, useEffect, useLayoutEffect } from 'react';
-import './contact.css';
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+
+import css from './contact.module.css';
 
 const Contact = () => {
-  const contact = useRef();
-
-  console.clear();
-  let count = 0;
-  const targets = document.querySelectorAll('.box');
-  gsap.set(targets, { xPercent: 100 });
-  gsap.set(targets[0], { xPercent: 0 });
-
-  // Next button
-  function slideOneNext() {
-    gsap.fromTo(
-      targets[count],
-      { xPercent: 0, zIndex: 0 },
-      { delay: 0.2, duration: 1.2, xPercent: 0, zIndex: -10 }
-    );
-    count = count < targets.length - 1 ? ++count : 0;
-    gsap.fromTo(
-      targets[count],
-      { xPercent: 100, zIndex: 10 },
-      { duration: 1.2, xPercent: 0, zIndex: 0 }
-    );
-  }
-  // nextButton.addEventListener('click', function () {
-  //   slideOneNext();
-  // });
-
-  // Previous button
-  function slideOnePrev() {
-    gsap.fromTo(
-      targets[count],
-      { xPercent: 0, zIndex: 10 },
-      { xPercent: 0, zIndex: 0 }
-    );
-    gsap.fromTo(
-      targets[count],
-      { xPercent: 0, zIndex: 0 },
-      { delay: 0, duration: 1.2, xPercent: 100, zIndex: -10 }
-    );
-    count = count < targets.length ? --count : 0;
-  }
-  // prevButton.addEventListener('click', function () {
-  //   slideOnePrev();
-  // });
-
   return (
     <PageWrapper>
-      <div className="left_page">
-        <h1>My contacts page</h1>
-        <div className="box-container">
-          <div className="box box01">SLIDE-01</div>
-          <div className="box box02">SLIDE-02</div>
-          <div className="box box03">SLIDE-03</div>
-          <div className="box box04">SLIDE-04</div>
-        </div>
-
-        <div className="controls">
-          <button id="prevButton" onClick={slideOnePrev}>
-            Prev
-          </button>
-          <button id="nextButton" onClick={slideOneNext}>
-            Next
-          </button>
-        </div>
+      <div className={css.left_page}>
+        <Span>M</Span>
+        <Span>y</Span>
+        <Span>&nbsp;</Span>
+        <Span>c</Span>
+        <Span>o</Span>
+        <Span>n</Span>
+        <Span>t</Span>
+        <Span>a</Span>
+        <Span>c</Span>
+        <Span>t</Span>
+        <Span>s</Span>
       </div>
-      <div className="right_page"></div>
+
+      <div className={css.right_page}></div>
     </PageWrapper>
   );
 };
 export default Contact;
+//----animation------------
+const animation = keyframes`
+  10% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(0deg) translate(0);
+		opacity: 1;
+	}
+  `;
+const Span = styled.span`
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  color: rgba(121, 99, 78, 1);
+  opacity: 0;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: ${animation} 0.5s forwards;
+
+  :nth-of-type(2) {
+    animation-delay: 0.05s;
+  }
+  :nth-of-type(3) {
+    animation-delay: 0.1s;
+  }
+  :nth-of-type(4) {
+    animation-delay: 0.15s;
+  }
+  :nth-of-type(5) {
+    animation-delay: 0.2s;
+  }
+  :nth-of-type(6) {
+    animation-delay: 0.25s;
+  }
+  :nth-of-type(7) {
+    animation-delay: 0.3s;
+  }
+  :nth-of-type(8) {
+    animation-delay: 0.35s;
+  }
+  :nth-of-type(9) {
+    animation-delay: 0.4s;
+  }
+  :nth-of-type(10) {
+    animation-delay: 0.45s;
+  }
+  :nth-of-type(11) {
+    animation-delay: 0.5s;
+  }
+  // :nth-of-type(12) {
+  //   animation-delay: 0.55s;
+  // }
+  // :nth-of-type(13) {
+  //   animation-delay: 0.6s;
+  // }
+  // :nth-of-type(14) {
+  //   animation-delay: 0.65s;
+  // }
+  // :nth-of-type(15) {
+  //   animation-delay: 0.7s;
+  // }
+  // :nth-of-type(16) {
+  //   animation-delay: 0.75s;
+  // }
+`;
