@@ -4,6 +4,8 @@ import styled, { keyframes } from 'styled-components';
 
 import css from './contact.module.css';
 
+import { Form } from 'components';
+
 const Contact = () => {
   return (
     <PageWrapper>
@@ -19,9 +21,16 @@ const Contact = () => {
         <Span>c</Span>
         <Span>t</Span>
         <Span>s</Span>
+        <ContactText>
+          I am interested in employment opportunities or large projects. Also,
+          if you have any other questions, please contact me using the form on
+          the right. I will be happy to help you.
+        </ContactText>
       </div>
 
-      <div className={css.right_page}></div>
+      <div className={css.right_page}>
+        <Form />
+      </div>
     </PageWrapper>
   );
 };
@@ -91,4 +100,16 @@ const Span = styled.span`
   // :nth-of-type(16) {
   //   animation-delay: 0.75s;
   // }
+`;
+
+const ContactText = styled.p`
+  color: rgba(121, 99, 78, 1);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: justify;
+  opacity: 0;
+  transform: rotate(-5deg) translate(-650px, 0);
+  animation: ${animation} 1s forwards;
+  animation-delay: 1s;
 `;

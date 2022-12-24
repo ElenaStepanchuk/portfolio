@@ -17,8 +17,8 @@ const About = () => {
           <Span>m</Span>
           <Span>e</Span>
           <Text>
-            Hi, This is Olena Stepanchuk. A full stack web developer & mobile
-            app developer.
+            Hi, I am Olena Stepanchuk, a full stack web developer & mobile app
+            developer.
           </Text>
           <Text>
             My skills are wide: HTML layout and styling, Java Script, React JS,

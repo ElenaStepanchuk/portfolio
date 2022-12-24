@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.input_wrapper {
+  position: relative;
+  padding: 20px 0 0 0;
+}
+.form_input {
+  width: 410px;
+  height: 30px;
+  padding: 10px;
+  color: rgba(121, 99, 78, 1);
+  font-style: italic;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+}
+.form_input_message {
+  width: 410px;
+  height: 120px;
+  padding: 10px;
+  color: rgba(121, 99, 78, 1);
+  font-style: italic;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+}
+.form_input:focus,
+.form_input_message:focus {
+  border: 2px solid rgba(121, 99, 78, 1);
+}
+.form_input::placeholder,
+.form_input_message::placeholder {
+  color: transparent;
+}
+.form_label {
+  display: flex;
+  pointer-events: none;
+  position: absolute;
+  top: 22px;
+  font-size: 14px;
+  left: 10px;
+  transition: all 0.1s linear;
+  background-color: #ffffff;
+  color: rgba(121, 99, 78, 0.5);
+  padding: 5px;
+  box-sizing: border-box;
+}
+.input_wrapper:focus + label,
+.input_wrapper input:not(:placeholder-shown) + label,
+.input_wrapper textarea:not(:placeholder-shown) + label {
+  font-size: 10px;
+  top: 0;
+  color: #ffffff;
+  background-color: transparent;
+}
+.form_button {
+  border: 2px solid transparent;
+  color: rgba(121, 99, 78, 1);
+  background: #ffffff;
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100px;
+  outline: none;
+}
+.form_button:hover,
+.form_button:focus {
+  background: rgba(121, 99, 78, 1);
+  color: #ffffff;
+}

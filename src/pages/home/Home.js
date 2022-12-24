@@ -24,20 +24,25 @@ const Home = () => {
             <Span>`</Span>
             <Span>s</Span>
             <Span>&nbsp;</Span>
-            <Span>g</Span>
-            <Span>e</Span>
-            <Span>t</Span>
-            <Span>&nbsp;</Span>
-            <Span>a</Span>
-            <Span>c</Span>
-            <Span>q</Span>
-            <Span>u</Span>
-            <Span>a</Span>
             <Span>i</Span>
             <Span>n</Span>
             <Span>t</Span>
-            <Span>e</Span>
+            <Span>r</Span>
+            <Span>o</Span>
             <Span>d</Span>
+            <Span>u</Span>
+            <Span>c</Span>
+            <Span>e</Span>
+            <Span>&nbsp;</Span>
+            <Span>o</Span>
+            <Span>u</Span>
+            <Span>r</Span>
+            <Span>s</Span>
+            <Span>e</Span>
+            <Span>l</Span>
+            <Span>v</Span>
+            <Span>e</Span>
+            <Span>s</Span>
             <Span>,</Span>
           </Text>
           <Text>

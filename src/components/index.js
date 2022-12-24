@@ -7,3 +7,4 @@ export { default as FooterAnimations } from './footerAnimations/FooterAnimations
 export { default as Footer } from './footer/Footer';
 export { default as DollarsAnimation } from './dollarsAnimation/DollarsAnimation';
 export { default as PageWrapper } from './pageWrapper/PageWrapper';
+export { default as Form } from './form/Form';

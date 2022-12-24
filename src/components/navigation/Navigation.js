@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import css from './navigation.css';
 
+import log from '../../img/log/log3.png';
+
 import homeSvg from '../../img/nav/home.svg';
 import personSvg from '../../img/nav/person.svg';
 import skillsSvg from '../../img/nav/skills.svg';
@@ -13,6 +15,7 @@ const Navigation = () => {
     <>
       <LeftNavContainer>
         <NavTitle>
+          <Log src={log} alt="log" />
           <Span>O</Span>
           <Span>l</Span>
           <Span>e</Span>
@@ -102,8 +105,15 @@ export default Navigation;
 const LeftNavContainer = styled.div`
   padding-left: 30px;
 `;
+const Log = styled.img`
+  width: 24px;
+  height: 24px;
+  margin-left: -30px;
+  // margin-top: 15px;
+`;
 const NavTitle = styled.h1`
   font-size: 28px;
+  // font-size: 20px;
   color: rgba(121, 99, 78, 1);
   text-transform: uppercase;
   margin: 0;
@@ -323,6 +333,7 @@ const NavLinkButton = styled(NavLink)`
   position: relative;
   transition: all 500ms ease;
   transition: transform 0.2s;
+  outline: none;
 
   :hover {
     transform: scale(1.3);
