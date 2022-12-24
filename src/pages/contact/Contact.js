@@ -10,17 +10,16 @@ const Contact = () => {
   return (
     <PageWrapper>
       <div className={css.left_page}>
-        <Span>M</Span>
-        <Span>y</Span>
-        <Span>&nbsp;</Span>
-        <Span>c</Span>
+        <Span>C</Span>
         <Span>o</Span>
         <Span>n</Span>
         <Span>t</Span>
         <Span>a</Span>
         <Span>c</Span>
         <Span>t</Span>
-        <Span>s</Span>
+        <Span>&nbsp;</Span>
+        <Span>m</Span>
+        <Span>e</Span>
         <ContactText>
           I am interested in employment opportunities or large projects. Also,
           if you have any other questions, please contact me using the form on
@@ -82,24 +81,6 @@ const Span = styled.span`
   :nth-of-type(10) {
     animation-delay: 0.45s;
   }
-  :nth-of-type(11) {
-    animation-delay: 0.5s;
-  }
-  // :nth-of-type(12) {
-  //   animation-delay: 0.55s;
-  // }
-  // :nth-of-type(13) {
-  //   animation-delay: 0.6s;
-  // }
-  // :nth-of-type(14) {
-  //   animation-delay: 0.65s;
-  // }
-  // :nth-of-type(15) {
-  //   animation-delay: 0.7s;
-  // }
-  // :nth-of-type(16) {
-  //   animation-delay: 0.75s;
-  // }
 `;
 
 const ContactText = styled.p`
