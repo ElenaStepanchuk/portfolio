@@ -87,7 +87,7 @@ const FooterButton = styled.button`
   margin-left: 80px;
   margin-top: 50px;
   padding: 10px;
-  /* z-index: 5; */
+  outline: none;
   background: linear-gradient(
     90deg,
     rgba(104, 114, 140, 1) 0%,
@@ -95,6 +95,7 @@ const FooterButton = styled.button`
   );
   border: none;
 `;
+
 const SocialContainer = styled.div`
   display: flex;
   background: linear-gradient(
@@ -117,6 +118,7 @@ const SocialContainer = styled.div`
 const IconFooterBtn = styled.img`
   width: 60px;
   height: 60px;
+  outline: none;
 `;
 const SocialLink = styled.a`
   :not(:first-child) {

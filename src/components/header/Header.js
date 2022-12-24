@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Navigation } from 'components';
 import styled from 'styled-components';
+
 // import headerBg from '../../img/bg/headerBg.jpg';
 
 const Header = () => {
