@@ -29,5 +29,3 @@ const BackgroundWrapper = styled.div`
   Коричневый светлый
   rgba(192,166,143,1) */
 `;
-// api key
-// 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
