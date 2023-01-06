@@ -1,6 +1,20 @@
 import css from './form.module.css';
 import React, { useState } from 'react';
 
+// const fs = require('fs/promises');
+// const express = require('express');
+// const cors = require('cors');
+
+// const app = express();
+// app.use(cors());
+
+// app.listen(3000);
+
+// const sgMail = require('@sendgrid/mail');
+// require('dotenv').config();
+// const { SENDGRID_API_KEY } = process.env;
+// sgMail.setApiKey(SENDGRID_API_KEY);
+
 const Form = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,17 +40,28 @@ const Form = () => {
         return;
     }
   };
-  const HandleSubmit = event => {
-    event.preventDefault();
-    console.log(name, email, subject, message);
-    reset();
-  };
 
   const reset = () => {
     setName('');
     setEmail('');
     setSubject('');
     setMessage('');
+  };
+  // const emailLetter = {
+  //   to: 'podolyak365@gmail.com',
+  //   from: 'podolyak365@gmail.com',
+  //   subject: `${subject}`,
+  //   html: `${message}`,
+  // };
+
+  const HandleSubmit = event => {
+    event.preventDefault();
+    // sgMail
+    //   .send(emailLetter)
+    //   .then(() => console.log('Email send success'))
+    //   .catch(error => console.log(error.message));
+    console.log(name, email, subject, message);
+    reset();
   };
 
   return (
